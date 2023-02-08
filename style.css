@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*p/ calculo ficar melhor*/
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background: #141212;
+  font-family: 'Epilogue', sans-serif;
+
+  display: grid;
+  min-height: 100vh;
+}
+
+button {
+  border: none;
+  background: none;
+
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.screenContainer {
+  align-self: end;
+  justify-self: center;
+}
+
+.screenTimer {
+  font-size: 8.8rem;
+  color: #ffff;
+  font-weight: 700;
+  width: 230px;
+}
+
+.controls-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 230px;
+  padding: 22px;
+
+  background: rgba(66, 211, 255, 0.13);
+  border-radius: 100px;
+
+  gap: 32px;
+}
+
+.volume-btn {
+  align-self: end;
+  justify-self: end;
+
+  padding: 30px;
+}
