@@ -2,8 +2,11 @@ export function Timer({ minutesDisplay, secondsDisplay, stopControl }) {
   let timerTimeOut
   let minutes = +minutesDisplay.textContent
 
-  function updateTimerDisplay(minutes, seconds) {
-    minutesDisplay.textContent = (minutes < 10 ? '0' : '') + minutes
+  function updateTimerDisplay(newMinutes, seconds) {
+    newMinutes = newMinutes === undefined ? minutes : newMinutes
+    seconds = seconds === undefined ? 0 : seconds
+
+    minutesDisplay.textContent = (newMinutes < 10 ? '0' : '') + newMinutes
     secondsDisplay.textContent = (seconds < 10 ? '0' : '') + seconds
     console.log('Minutes: ', minutes, 'Seconds: ', seconds)
   }
@@ -19,8 +22,9 @@ export function Timer({ minutesDisplay, secondsDisplay, stopControl }) {
       let minutes = +minutesDisplay.textContent
 
       updateTimerDisplay(minutes, 0)
-      if (minutes <= 0) {
+      if (minutes <= 0 && seconds <= 0) {
         stopControl()
+        updateTimerDisplay()
         return
       }
 
