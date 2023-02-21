@@ -1,4 +1,4 @@
-export default function Controls({playBtn,pauseBtn,stopBtn,stopwatchBtn}) {
+export default function Controls({ playBtn, pauseBtn, stopBtn, stopwatchBtn }) {
   function play() {
     playBtn.classList.add('hide')
     pauseBtn.classList.remove('hide')
@@ -24,7 +24,6 @@ export default function Controls({playBtn,pauseBtn,stopBtn,stopwatchBtn}) {
     if (!inputMinutes) {
       return false
     }
-
     return inputMinutes
   }
 

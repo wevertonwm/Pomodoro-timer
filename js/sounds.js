@@ -1,4 +1,4 @@
-export default function () {
+export default function Sounds() {
   const playSound = new Audio('/assets/sound/play_pause.mp3')
   const stopwatchSound = new Audio('/assets/sound/stop.mp3')
   const alerm = new Audio('/assets/sound/alarm_clock.mp3')
@@ -20,10 +20,7 @@ export default function () {
     alerm.play()
   }
 
-  return {
-    pressPlay,
-    pressStowatch,
-    pressVolume,
-    timeEnd
+  return { 
+    pressPlay, pressStowatch, pressVolume, timeEnd 
   }
 }

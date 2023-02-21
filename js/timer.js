@@ -1,3 +1,5 @@
+import Saund from './sounds.js'
+
 export function Timer({ minutesDisplay, secondsDisplay, stopControl }) {
   let timerTimeOut
   let minutes = +minutesDisplay.textContent
@@ -25,11 +27,12 @@ export function Timer({ minutesDisplay, secondsDisplay, stopControl }) {
       if (minutes <= 0 && seconds <= 0) {
         stopControl()
         updateTimerDisplay()
+        Saund().timeEnd()
         return
       }
 
       if (seconds <= 0) {
-        seconds = 12
+        seconds = 60
         --minutes
       }
 
